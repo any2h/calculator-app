@@ -1,0 +1,380 @@
+/* Box sizing rules */
+/* line 2, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+/* line 9, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+/* line 23, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+/* line 29, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+/* line 34, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+body {
+  min-height: 100vh;
+  font-family: 'Spartan', sans-serif;
+  font-size: 2rem;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+/* line 43, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* line 48, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* line 55, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  /* line 64, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  /* line 68, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_reset.scss */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ----------------- */
+/* Custom Properties */
+/* ----------------- */
+/* font-size */
+/*** Theme 1 ***/
+/* backgrounds */
+/* keys */
+/* text */
+/*** Theme 2 ***/
+/* backgrounds */
+/* keys */
+/* text */
+/*** Theme 3 ***/
+/* backgrounds */
+/* keys */
+/* text */
+/* --------------- */
+/* Utility Classes */
+/* --------------- */
+/* line 76, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_variables.scss */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+/* line 81, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_variables.scss */
+.flow > * + * {
+  margin-top: var(--flow-space, 1.5rem);
+}
+
+/* ------------ */
+/* Layout       */
+/* ------------ */
+/* line 5, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.wrapper {
+  padding: 1rem;
+}
+
+@media (min-width: 48em) {
+  /* line 10, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+  .wrapper {
+    max-width: 30rem;
+    margin: 5rem auto;
+  }
+}
+
+/* line 16, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.header {
+  justify-content: space-between;
+}
+
+/* line 19, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.header .app-name {
+  align-self: center;
+}
+
+/* line 24, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-wrapper {
+  --gap: 1.5rem;
+}
+
+/* line 27, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-wrapper > :first-child {
+  font-size: .75rem;
+  align-self: end;
+  margin-bottom: .5rem;
+}
+
+/* line 34, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-wrapper .theme-details > :first-child {
+  display: flex;
+  justify-content: space-around;
+  font-size: .75rem;
+  margin-bottom: .25rem;
+}
+
+/* line 41, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-wrapper .theme-details .theme-indicators {
+  display: flex;
+  gap: .5rem;
+  justify-content: space-between;
+  padding: .5rem;
+  border-radius: 25px;
+}
+
+/* line 48, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-wrapper .theme-details .theme-indicators > * {
+  aspect-ratio: 1;
+  width: 1rem;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+/* line 59, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+#input {
+  width: 100%;
+  padding: 1.25rem;
+  text-align: right;
+  border: 0;
+  border-radius: 10px;
+}
+
+/* line 67, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.btn-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+/* line 74, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.btn-container > * {
+  padding: .5rem;
+  border-radius: 5px;
+}
+
+/* line 79, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.btn-container .btn-reset, .btn-container .btn-del {
+  font-size: 1.25rem;
+}
+
+/* line 83, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.btn-container .btn-reset, .btn-container .btn-equals {
+  grid-column: span 2;
+}
+
+/* ----------- */
+/* Themes      */
+/* ----------- */
+/* Theme 1 */
+/* line 94, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-1 {
+  background-color: #3a4764;
+}
+
+/* line 97, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-1 .header {
+  color: white;
+}
+
+/* line 100, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-1 .header .theme-indicators {
+  background-color: #232c43;
+}
+
+/* line 103, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-1 .header .theme-indicators > *[aria-selected="true"] {
+  background-color: #d03f2f;
+}
+
+/* line 109, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-1 #input {
+  background-color: #182034;
+  color: white;
+}
+
+/* line 114, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-1 .btn-container {
+  background-color: #232c43;
+}
+
+/* line 117, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-1 .btn-container > * {
+  background-color: #eae3dc;
+  color: #444b5a;
+  border: 0;
+  box-shadow: 0 4px 0 0 #b4a597;
+}
+
+/* line 124, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-1 .btn-container .btn-del, .theme-1 .btn-container .btn-reset {
+  background-color: #637097;
+  color: white;
+  box-shadow: 0 4px 0 0 #404e72;
+}
+
+/* line 130, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-1 .btn-container .btn-equals {
+  background-color: #d03f2f;
+  color: white;
+  box-shadow: 0 4px 0 0 #93261a;
+}
+
+/* Theme-2 */
+/* line 139, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-2 {
+  background-color: #e6e6e6;
+}
+
+/* line 142, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-2 .header {
+  color: #35352c;
+}
+
+/* line 145, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-2 .header .theme-indicators {
+  background-color: #d1cccc;
+}
+
+/* line 148, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-2 .header .theme-indicators > *[aria-selected="true"] {
+  background-color: #ca5502;
+}
+
+/* line 154, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-2 #input {
+  background-color: #ededed;
+  color: #35352c;
+}
+
+/* line 159, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-2 .btn-container {
+  background-color: #d1cccc;
+}
+
+/* line 162, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-2 .btn-container > * {
+  background-color: #e5e4e1;
+  color: #35352c;
+  border: 0;
+  box-shadow: 0 4px 0 0 #a69d91;
+}
+
+/* line 169, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-2 .btn-container .btn-del, .theme-2 .btn-container .btn-reset {
+  background-color: #377f86;
+  color: white;
+  box-shadow: 0 4px 0 0 #1b5f65;
+}
+
+/* line 175, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-2 .btn-container .btn-equals {
+  background-color: #ca5502;
+  color: white;
+  box-shadow: 0 4px 0 0 #893901;
+}
+
+/* Theme 3 */
+/* line 184, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-3 {
+  background-color: #160628;
+}
+
+/* line 187, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-3 .header {
+  color: #ffe53d;
+}
+
+/* line 190, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-3 .header .theme-indicators {
+  background-color: #1d0934;
+}
+
+/* line 193, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-3 .header .theme-indicators > *[aria-selected="true"] {
+  background-color: #00e0d1;
+}
+
+/* line 199, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-3 #input {
+  background-color: #1d0934;
+  color: #ffe53d;
+}
+
+/* line 204, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-3 .btn-container {
+  background-color: #1d0934;
+}
+
+/* line 207, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-3 .btn-container > * {
+  background-color: #341c4f;
+  color: #ffe53d;
+  border: 0;
+  box-shadow: 0 4px 0 0 #871c9c;
+}
+
+/* line 214, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-3 .btn-container .btn-del, .theme-3 .btn-container .btn-reset {
+  background-color: #58077d;
+  color: white;
+  box-shadow: 0 4px 0 0 #bc15f4;
+}
+
+/* line 220, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+.theme-3 .btn-container .btn-equals {
+  background-color: #00e0d1;
+  color: #1b2428;
+  box-shadow: 0 4px 0 0 #6cf9f2;
+}
+
+/*# sourceMappingURL=main.css.map */
