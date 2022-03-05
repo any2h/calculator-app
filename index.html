@@ -39,9 +39,9 @@
             </div>
 
             <div class="theme-indicators">
-              <button aria-selected="true"></button>
-              <button aria-selected="false"></button>
-              <button aria-selected="false"></button>
+              <button class="active" data-theme="theme-1"></button>
+              <button data-theme="theme-2"></button>
+              <button data-theme="theme-3"></button>
             </div>
           </div>
 
@@ -49,29 +49,29 @@
     
       </div>
 
-      <div>
-        <input type="text" id="input">
+      <div id="output">
+        <span>0</span>
       </div>
 
       <div class="btn-container">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="btn-del">DEL</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>+</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>-</button>
+        <button data-type="number">7</button>
+        <button data-type="number">8</button>
+        <button data-type="number">9</button>
+        <button data-type="delete">DEL</button>
+        <button data-type="number">4</button>
+        <button data-type="number">5</button>
+        <button data-type="number">6</button>
+        <button data-key="plus" data-type="operator">+</button>
+        <button data-type="number">1</button>
+        <button data-type="number">2</button>
+        <button data-type="number">3</button>
+        <button data-key="minus" data-type="operator">-</button>
         <button>.</button>
-        <button>0</button>
-        <button>/</button>
-        <button>x</button>
-        <button class="btn-reset">RESET</button>
-        <button class="btn-equals">=</button>
+        <button data-type="number">0</button>
+        <button data-key="divide" data-type="operator">/</button>
+        <button data-key="multi" data-type="operator">x</button>
+        <button data-type="reset">RESET</button>
+        <button data-type="equal">=</button>
       </div>
 
     </div>
@@ -81,5 +81,6 @@
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </div> -->
+    <script src="script.js"></script>
   </body>
 </html>

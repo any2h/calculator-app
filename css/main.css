@@ -165,25 +165,25 @@ select {
   display: flex;
   gap: .5rem;
   justify-content: space-between;
-  padding: .5rem;
+  padding: .4rem;
   border-radius: 25px;
 }
 
 /* line 48, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
 .theme-wrapper .theme-details .theme-indicators > * {
+  cursor: pointer;
   aspect-ratio: 1;
-  width: 1rem;
+  width: 1.25rem;
   border: 0;
   border-radius: 50%;
   background-color: transparent;
 }
 
-/* line 59, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-#input {
-  width: 100%;
-  padding: 1.25rem;
+/* line 60, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
+#output {
+  padding: 1.5rem;
+  height: 5.5rem;
   text-align: right;
-  border: 0;
   border-radius: 10px;
 }
 
@@ -203,12 +203,12 @@ select {
 }
 
 /* line 79, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.btn-container .btn-reset, .btn-container .btn-del {
+.btn-container [data-type="reset"], .btn-container [data-type="delete"] {
   font-size: 1.25rem;
 }
 
 /* line 83, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.btn-container .btn-reset, .btn-container .btn-equals {
+.btn-container [data-type="reset"], .btn-container [data-type="equal"] {
   grid-column: span 2;
 }
 
@@ -232,12 +232,12 @@ select {
 }
 
 /* line 103, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-1 .header .theme-indicators > *[aria-selected="true"] {
+.theme-1 .header .theme-indicators > *.active {
   background-color: #d03f2f;
 }
 
 /* line 109, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-1 #input {
+.theme-1 #output {
   background-color: #182034;
   color: white;
 }
@@ -256,14 +256,14 @@ select {
 }
 
 /* line 124, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-1 .btn-container .btn-del, .theme-1 .btn-container .btn-reset {
+.theme-1 .btn-container [data-type="reset"], .theme-1 .btn-container [data-type="delete"] {
   background-color: #637097;
   color: white;
   box-shadow: 0 4px 0 0 #404e72;
 }
 
 /* line 130, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-1 .btn-container .btn-equals {
+.theme-1 .btn-container [data-type="equal"] {
   background-color: #d03f2f;
   color: white;
   box-shadow: 0 4px 0 0 #93261a;
@@ -286,12 +286,12 @@ select {
 }
 
 /* line 148, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-2 .header .theme-indicators > *[aria-selected="true"] {
+.theme-2 .header .theme-indicators > *.active {
   background-color: #ca5502;
 }
 
 /* line 154, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-2 #input {
+.theme-2 #output {
   background-color: #ededed;
   color: #35352c;
 }
@@ -310,14 +310,14 @@ select {
 }
 
 /* line 169, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-2 .btn-container .btn-del, .theme-2 .btn-container .btn-reset {
+.theme-2 .btn-container [data-type="reset"], .theme-2 .btn-container [data-type="delete"] {
   background-color: #377f86;
   color: white;
   box-shadow: 0 4px 0 0 #1b5f65;
 }
 
 /* line 175, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-2 .btn-container .btn-equals {
+.theme-2 .btn-container [data-type="equal"] {
   background-color: #ca5502;
   color: white;
   box-shadow: 0 4px 0 0 #893901;
@@ -340,12 +340,12 @@ select {
 }
 
 /* line 193, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-3 .header .theme-indicators > *[aria-selected="true"] {
+.theme-3 .header .theme-indicators > *.active {
   background-color: #00e0d1;
 }
 
 /* line 199, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-3 #input {
+.theme-3 #output {
   background-color: #1d0934;
   color: #ffe53d;
 }
@@ -364,14 +364,14 @@ select {
 }
 
 /* line 214, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-3 .btn-container .btn-del, .theme-3 .btn-container .btn-reset {
+.theme-3 .btn-container [data-type="reset"], .theme-3 .btn-container [data-type="delete"] {
   background-color: #58077d;
   color: white;
   box-shadow: 0 4px 0 0 #bc15f4;
 }
 
 /* line 220, ../PP/frontendmentor.io/Calculator app/calculator-app-main/calculator-app-main/scss/_styles.scss */
-.theme-3 .btn-container .btn-equals {
+.theme-3 .btn-container [data-type="equal"] {
   background-color: #00e0d1;
   color: #1b2428;
   box-shadow: 0 4px 0 0 #6cf9f2;
