@@ -1,6 +1,7 @@
 const themeBtns = document.querySelectorAll('.theme-indicators button'),
     output = document.querySelector('#output span'),
     calculator = document.querySelector('.btn-container'),
+    operatorKeys = calculator.querySelectorAll('[data-type="operator"]'),
     calcKeys = calculator.querySelectorAll('button');
 
 calcKeys.forEach(btn => btn.addEventListener('mousedown', (e) => {
@@ -33,7 +34,6 @@ calculator.addEventListener('click', (e) => {
     }
 
     if (type === 'operator') {
-        const operatorKeys = calculator.querySelectorAll('[data-type="operator"]');
         operatorKeys.forEach(key => { key.dataset.state = ''; });
         key.dataset.state = 'selected';
         
@@ -48,7 +48,18 @@ calculator.addEventListener('click', (e) => {
             output.textContent = calc(firstNum, operator, secondNum);
     }
 
+    if (type === 'delete') {
+        output.textContent = output.textContent.slice(0, -1);
+    }
+
+    if (type === 'reset') {
+        output.textContent = '0';
+        delete calculator.dataset.firstNum;
+        delete calculator.dataset.operator;
+    }
+
     calculator.dataset.previousKeyType = type;
+
 });
 
 function calc(num1, operator, num2) {
